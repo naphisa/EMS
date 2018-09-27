@@ -1,0 +1,20 @@
+{%extends 'records/base.html'%}
+{%block content%}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="form-horizontal" role='form' action="{%url 'records:login'%}" method="POST" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            {%include 'records/form_template.html'%}
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock content%}

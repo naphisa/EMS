@@ -1,0 +1,17 @@
+{%extends 'record/profile.html'%}
+{%block content%}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="fieldWrapper form-group">
+                <p><h1>Employee details</h1>
+                    <h2>Basic Salary:&nbsp;${{payment_details.basic_salary}}</h2>
+                    <h2>Tax:&nbsp;{{payment_details.tax}}%</h2>
+                    <h2>NHIS charge:&nbsp;{{payment_details.nhis_charge}}%</h2>
+                    <h2>Net Pay:&nbsp;${{payment_details.net_pay}}</h2>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}</html>

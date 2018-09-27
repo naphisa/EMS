@@ -1,0 +1,15 @@
+{%extends 'records/base.html'%}
+
+{%block content%}
+{%if object_list%}
+    {%for record in object_list%}
+        <div>
+            <a href="{%url 'record:profile' record.pk%}">
+                {{forloop.counter}}. &nbsp;{{record.firstname}}&nbsp;{{record.surname}}
+            </a>
+        </div>
+    {%endfor%}
+{%else%}
+    <h2>No registered staff yet!!</h2>
+{%endif%}
+{%endblock content%}

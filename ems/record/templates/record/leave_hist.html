@@ -1,0 +1,24 @@
+{%extends 'record/profile.html'%}
+{%block content%}
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>Leave Type</th>
+                    <th>Num of days</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+
+        {%for field in obj.leaves_set.all%}
+            <tr>
+                <td>{{field.leave_type}}</td>
+                <td>{{field.num_days}}</td>
+                <td>{{field.start_date}}</td>
+                <td>{{field.end_date}}</td>
+                <td>{{field.status}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+{%endblock content%}

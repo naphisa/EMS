@@ -1,0 +1,17 @@
+{%extends 'record/admin_page.html'%}
+{%block content%}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="fieldWrapper form-group">
+                <p><h1>Company details</h1>
+                    <h2>Tax:&nbsp;{{obj.tax}}%</h2>
+                    <h2>NHIS charge:&nbsp;{{obj.nhis_charge}}%</h2>
+                    <h2>Total Salary Monthly:&nbsp;${{obj.total_salary_monthly}}</h2>
+                    <h2>Total Number of Staffs:&nbsp;{{obj.no_of_staff}}</h2>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}</html>
